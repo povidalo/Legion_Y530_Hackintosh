@@ -1,0 +1,1 @@
+# Legion_Y530_Hackintosh
