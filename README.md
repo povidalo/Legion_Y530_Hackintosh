@@ -11,10 +11,19 @@ My setup:
 
 The current efi version works with Sonoma 14.2
 
-The config is based on
+The config is based on (huge thanks to the author)
 https://github.com/yusufklncc/Lenovo-Legion-5-Hackintosh
-To enable wifi on legacy wifi cards folow this guide from step 8 
+
+
+To enable wifi on legacy wifi cards (such as BCM4352 in my config) folow this guide from step 8 
 https://elitemacx86.com/threads/how-to-fix-broadcom-wifi-on-macos-sonoma-and-later.1415/
+- reset NVRAM
+- boot into system
+- run OpenCore Legacy Patcher https://dortania.github.io/OpenCore-Legacy-Patcher/
+- click on Post Install Root Patch
+- once suggested - reboot
+- reset NVRAM again
+- boot into system - wifi should be working
 
 
 
