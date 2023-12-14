@@ -12,7 +12,10 @@ My setup:
 The current efi version works with Sonoma 14.2
 
 The config is based on (huge thanks to the author)
-https://github.com/yusufklncc/Lenovo-Legion-5-Hackintosh
+https://github.com/chilledHamza/Hackintosh_Legion_Y530
+
+
+When setting this up, follow the guide for the serial number setup from this repo: https://github.com/yusufklncc/Lenovo-Legion-5-Hackintosh
 
 
 To enable wifi on legacy wifi cards (such as BCM4352 in my config) folow this guide from step 8 
@@ -27,6 +30,6 @@ https://elitemacx86.com/threads/how-to-fix-broadcom-wifi-on-macos-sonoma-and-lat
 
 
 
-While setting up this confiog the following setups were used as reference, huge thanks to those:
+While setting up this config the following setups were used as reference, huge thanks to those:
 - https://github.com/xiaoMGitHub/LEGION_Y7000Series_Hackintosh
-- https://github.com/chilledHamza/Hackintosh_Legion_Y530
+- https://github.com/yusufklncc/Lenovo-Legion-5-Hackintosh
