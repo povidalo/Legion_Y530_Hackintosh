@@ -15,6 +15,46 @@
 				<string>SSDT-DNVMe.aml</string>
 			</dict>
 			<dict>
+                <key>Comment</key>
+                <string>[Functional] Comprehensive Sleep and Wake Patch.</string>
+                <key>Enabled</key>
+                <true/>
+                <key>Path</key>
+                <string>SSDT-PTSWAK.aml</string>
+            </dict>
+            <dict>
+                <key>Comment</key>
+                <string>[Functional] Comprehensive Sleep and Wake Patch.</string>
+                <key>Enabled</key>
+                <true/>
+                <key>Path</key>
+                <string>SSDT-EXT4.aml</string>
+            </dict>
+            <dict>
+                <key>Comment</key>
+                <string>[Cosmetic] Adds ARTC device to IORegistry in macOS.</string>
+                <key>Enabled</key>
+                <true/>
+                <key>Path</key>
+                <string>SSDT-ARTC.aml</string>
+            </dict>
+            <dict>
+                <key>Comment</key>
+                <string>[Functional] Disables AWAC system clock for macOS and force-enables RTC instead. For 300-series chipsets and newer.</string>
+                <key>Enabled</key>
+                <true/>
+                <key>Path</key>
+                <string>SSDT-AWAC.aml</string>
+            </dict>
+            <dict>
+                <key>Comment</key>
+                <string>[Cosmetic] Attaches an AC Adapter Device existing in a Laptop's DSDT to the AppleACPIACAdapter service in the IORegistry of macOS.</string>
+                <key>Enabled</key>
+                <true/>
+                <key>Path</key>
+                <string>SSDT-AC.aml</string>
+            </dict>
+			<dict>
 				<key>Comment</key>
 				<string>[Functional] Disables NVIDIA GPU for better battery performance.</string>
 				<key>Enabled</key>
@@ -23,6 +63,14 @@
 				<string>SSDT-DGPU.aml</string>
 			</dict>
 			<dict>
+                <key>Comment</key>
+                <string>[Cosmetic] Adds Direct Memory Access Controller (DMAC) device to IO Registry.</string>
+                <key>Enabled</key>
+                <true/>
+                <key>Path</key>
+                <string>SSDT-DMAC.aml</string>
+            </dict>
+			<dict>
 				<key>Comment</key>
 				<string>Fake EC Device + USB Properties</string>
 				<key>Enabled</key>
@@ -30,6 +78,22 @@
 				<key>Path</key>
 				<string>SSDT-EC-USBX-LAPTOP.aml</string>
 			</dict>
+			<dict>
+                <key>Comment</key>
+                <string>[Cosmetic] Adds Fake Firmware Hub Device (FWHD) device to the IORegistry in macOS.</string>
+                <key>Enabled</key>
+                <true/>
+                <key>Path</key>
+                <string>SSDT-FWHD.aml</string>
+            </dict>
+            <dict>
+                <key>Comment</key>
+                <string>[Functional] Fixes IRQ conflicts. Required for on-board sound to work.</string>
+                <key>Enabled</key>
+                <true/>
+                <key>Path</key>
+                <string>SSDT-HPET.aml</string>
+            </dict>
 			<dict>
 				<key>Comment</key>
 				<string>PS2Keyboard -&gt; NumLock Fix</string>
@@ -63,13 +127,13 @@
 				<string>SSDT-PLUG.aml</string>
 			</dict>
 			<dict>
-				<key>Comment</key>
-				<string>Add PNLF device</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-PNLF.aml</string>
-			</dict>
+                <key>Comment</key>
+                <string>[Functional] Adds Backlight Control for Laptop Screens. Using Lunar App</string>
+                <key>Enabled</key>
+                <true/>
+                <key>Path</key>
+                <string>SSDT-PNLF-CFL.aml</string>
+            </dict>
 			<dict>
 				<key>Comment</key>
 				<string>[Functional] Fixes System Management Bus and Memory Controller in macOS.</string>
@@ -86,6 +150,14 @@
 				<key>Path</key>
 				<string>SSDT-TPD0.aml</string>
 			</dict>
+			<dict>
+                <key>Comment</key>
+                <string>[Cosmetic] Adds Platform Controller Hub (PCH) to IORegistry.</string>
+                <key>Enabled</key>
+                <true/>
+                <key>Path</key>
+                <string>SSDT-XSPI.aml</string>
+            </dict>
 		</array>
 		<key>Delete</key>
 		<array/>
@@ -417,6 +489,42 @@
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
+            <dict>
+                <key>Arch</key>
+                <string>x86_64</string>
+                <key>BundlePath</key>
+                <string>RestrictEvents.kext</string>
+                <key>Comment</key>
+                <string>V1.1.2 | [Processor] Lilu Kernel extension for blocking unwanted processes causing compatibility issues on different hardware and unlocking the support for certain features restricted to other hardware.</string>
+                <key>Enabled</key>
+                <true/>
+                <key>ExecutablePath</key>
+                <string>Contents/MacOS/RestrictEvents</string>
+                <key>MaxKernel</key>
+                <string></string>
+                <key>MinKernel</key>
+                <string>12.0.0</string>
+                <key>PlistPath</key>
+                <string>Contents/Info.plist</string>
+            </dict>
+            <dict>
+                <key>Arch</key>
+                <string>x86_64</string>
+                <key>BundlePath</key>
+                <string>HibernationFixup.kext</string>
+                <key>Comment</key>
+                <string>V1.4.9 | [Hibernate] An open source kernel extension providing a sync between RTC variables and NVRAM.</string>
+                <key>Enabled</key>
+                <true/>
+                <key>ExecutablePath</key>
+                <string>Contents/MacOS/HibernationFixup</string>
+                <key>MaxKernel</key>
+                <string></string>
+                <key>MinKernel</key>
+                <string>14.0.0</string>
+                <key>PlistPath</key>
+                <string>Contents/Info.plist</string>
+            </dict>
 			<dict>
 				<key>Arch</key>
 				<string>x86_64</string>
@@ -1568,32 +1676,7 @@
 			<false/>
 		</dict>
 		<key>ReservedMemory</key>
-		<array>
-			<dict>
-				<key>Address</key>
-				<integer>268435456</integer>
-				<key>Comment</key>
-				<string>HD3000: IGPU memory corruption errata</string>
-				<key>Enabled</key>
-				<false/>
-				<key>Size</key>
-				<integer>268435456</integer>
-				<key>Type</key>
-				<string>Reserved</string>
-			</dict>
-			<dict>
-				<key>Address</key>
-				<integer>569344</integer>
-				<key>Comment</key>
-				<string>Fix black screen on wake from hibernation for Lenovo Thinkpad T490</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Size</key>
-				<integer>4096</integer>
-				<key>Type</key>
-				<string>RuntimeCode</string>
-			</dict>
-		</array>
+		<array/>
 	</dict>
 </dict>
 </plist>
