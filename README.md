@@ -1,11 +1,13 @@
 # Legion_Y530_Hackintosh
 
+This is clover bootloader config for running MacOS Sonoma 14.2 on a Lenovo Legion Y530-15ich laptop.
+
 My setup:
 - Lenovo legion Y530-15ICH (81FV)
 - 16Gb ram
 - i5-8300H @ 2.3GHz
-- Intel 450Gb SATA SSD
-- Samsung EVO 960 256Gb M.2 (disabled in MacOS with SSDT-DNVMe.aml)
+- INTEL SSD 1Tb M.2 (running MacOS)
+- Intel 450Gb SATA SSD (additional space)
 - Original Realtek Wi-fi M.2 card replaced with BCM94352Z
 
 
