@@ -1,6 +1,6 @@
 # Legion_Y530_Hackintosh
 
-This is clover bootloader config for running MacOS Sonoma 14.2 on a Lenovo Legion Y530-15ich laptop.
+This is OpenCore bootloader config for running MacOS Sonoma 14.2 on a Lenovo Legion Y530-15ich laptop.
 
 My setup:
 - Lenovo legion Y530-15ICH (81FV)
